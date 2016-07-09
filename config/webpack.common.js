@@ -13,12 +13,14 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
 const HtmlElementsPlugin = require('./html-elements-plugin');
+const autoprefixer = require('autoprefixer');
+const ProvidePlugin = require('webpack/lib/ProvidePlugin');
 
 /*
  * Webpack Constants
  */
 const METADATA = {
-  title: 'Angular2 Webpack Starter by @gdi2290 from @AngularClass',
+  title: 'Studley Walton Gray Associates LLP',
   baseUrl: '/',
   isDevServer: helpers.isWebpackDevServer()
 };
@@ -29,7 +31,10 @@ const METADATA = {
  * See: http://webpack.github.io/docs/configuration.html#cli
  */
 module.exports = {
-
+  /*
+   * POSTCSS
+   */
+  postcss: [autoprefixer],
   /*
    * Static metadata for index.html
    *
@@ -163,7 +168,22 @@ module.exports = {
         test: /\.css$/,
         loaders: ['to-string-loader', 'css-loader']
       },
-
+      /*
+       * support for Sass, jquery and CSS
+       */
+      {
+        test: /\.scss$/,
+        loaders: ['raw-loader', 'sass-loader']
+      },
+      {
+        test: /\.(woff2?|ttf|eot|svg)$/,
+        loader: 'url?limit=10000'
+      },
+      // Bootstrap 4
+      {
+        test: /bootstrap\/dist\/js\/umd\//,
+        loader: 'imports?jQuery=jquery'
+      },
       /* Raw loader support for *.html
        * Returns file content as string
        *
@@ -267,6 +287,16 @@ module.exports = {
     new HtmlElementsPlugin({
       headTags: require('./head-config.common')
     }),
+    /*
+     * JQUERY plugin
+     */
+    new ProvidePlugin({
+      jQuery: 'jquery',
+      $: 'jquery',
+      jquery: 'jquery',
+      "Tether": 'tether',
+      "window.Tether": "tether"
+    })
 
   ],
 

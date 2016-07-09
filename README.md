@@ -5,6 +5,8 @@ This is SWGA website and application, we are starting the project on Angular2, l
 
 The website can be found [http://swga.co](http://swga.co)
 
+Initial boilerplate by 
+
 
 ### Quick start
 **Make sure you have Node version >= 5.0 and NPM >= 3**
