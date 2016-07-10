@@ -1,0 +1,28 @@
+@import "../assets/styles/variables";
+.brand {
+  background-color: $brand-primary;
+  color: #FFFFFF;
+  [class*=" display-"], [class^="display-"] {
+    margin-bottom: 2rem;
+    .text-muted {
+      font-size: $font-size-h4;
+      display: block;
+      color: inherit;
+    }
+  }
+}
+.readable {
+  max-width: 520px;
+}
+.blockquote {
+  padding-left: 2rem;
+}
+
+ul.nav-contents-brand {
+  li {
+    a {
+      color: #FFFFFF !important;
+      text-decoration: underline;
+    }
+  }
+}

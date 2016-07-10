@@ -16,50 +16,47 @@ import { AppState } from './app.service';
     './app.styles.scss'
   ],
   template: `
-    <nav>
-      <span>
-        <a [routerLink]=" ['./'] ">
-          Index
+    <nav class="navbar navbar-light">
+      <div class="container">
+        <a class="nav-link" [routerLink]="['./home']">
+          <img [src]="angularclassLogo" style="max-width: 400px;">
         </a>
-      </span>
-      |
-      <span>
-        <a [routerLink]=" ['./home'] ">
-          Home
-        </a>
-      </span>
-      |
-      <span>
-        <a [routerLink]=" ['./detail'] ">
-          Detail
-        </a>
-      </span>
-      |
-      <span>
-        <a [routerLink]=" ['./about'] ">
-          About
-        </a>
-      </span>
+        <ul class="nav navbar-nav">
+          <li [routerLinkActive]="['active']" class="nav-item">
+            <a class="nav-link" [routerLink]="['./home']">
+              About us
+            </a>
+          </li>
+          <li [routerLinkActive]="['active']" class="nav-item">
+            <a class="nav-link" [routerLink]="['./services']">
+              Services
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              People
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
-
     <main>
       <router-outlet></router-outlet>
     </main>
-
-    <pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
-
     <footer>
-      <span>WebPack Angular 2 Starter by <a [href]="url">@AngularClass</a></span>
-      <div>
-        <a [href]="url">
-          <img [src]="angularclassLogo" width="25%">
-        </a>
+      <div class="container">
+        
       </div>
     </footer>
   `
 })
 export class App {
-  angularclassLogo = 'assets/img/angularclass-avatar.png';
+  angularclassLogo = 'assets/img/swga_logo.png';
   name = 'Angular 2 Webpack Starter';
   url = 'https://twitter.com/AngularClass';
 
