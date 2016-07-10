@@ -1,4 +1,8 @@
 @import "../assets/styles/variables";
+
+a {
+  text-decoration: underline;
+}
 .brand {
   background-color: $brand-primary;
   color: #FFFFFF;

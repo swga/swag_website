@@ -5,7 +5,7 @@ This is SWGA website and application, we are starting the project on Angular2, l
 
 The website can be found [http://swga.co](http://swga.co)
 
-Initial boilerplate by 
+Initial boilerplate by Angular [https://github.com/AngularClass/angular2-webpack-starter] (https://github.com/AngularClass/angular2-webpack-starter)
 
 
 ### Quick start
