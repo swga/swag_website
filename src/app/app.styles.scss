@@ -15,6 +15,13 @@ a {
     }
   }
 }
+.footer {
+  background-color: $gray-lighter;
+  color: $gray;
+  padding-top: $jumbotron-padding;
+  padding-bottom: $jumbotron-padding;
+}
+
 .readable {
   max-width: 520px;
 }
