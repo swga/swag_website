@@ -18,13 +18,13 @@ import { AppState } from './app.service';
   template: `
     <nav class="navbar navbar-light">
       <div class="container">
-        <a class="nav-link" [routerLink]="['./home']">
-          <img [src]="angularclassLogo" style="max-width: 400px;">
+        <a style="max-width: 400px;" class="nav-link" [routerLink]="['./home']">
+          <img class="img-fluid" [src]="angularclassLogo">
         </a>
         <ul class="nav navbar-nav">
           <li [routerLinkActive]="['active']" class="nav-item">
             <a class="nav-link" [routerLink]="['./home']">
-              About us
+              Home
             </a>
           </li>
           <li [routerLinkActive]="['active']" class="nav-item">
@@ -32,14 +32,16 @@ import { AppState } from './app.service';
               Services
             </a>
           </li>
+          <!--
           <li class="nav-item">
             <a class="nav-link" href="#">
               People
             </a>
           </li>
+          -->
           <li class="nav-item">
             <a class="nav-link" href="#">
-              Contact
+        Associatesact
             </a>
           </li>
         </ul>
@@ -48,9 +50,13 @@ import { AppState } from './app.service';
     <main>
       <router-outlet></router-outlet>
     </main>
-    <footer>
+    <footer class="footer" role="contentinfo">
       <div class="container">
-        
+        <div class="row">
+          <div class="col-sm-6">
+            <p>&copy;2016 STUDLEY WALTON GRAY ASSOCIATES LLP</p>
+          </div>
+        </div>
       </div>
     </footer>
   `
@@ -66,7 +72,7 @@ export class App {
   }
 
   ngOnInit() {
-    console.log('Initial App State', this.appState.state);
+    //console.log('Initial App State', this.appState.state);
   }
 
 }
