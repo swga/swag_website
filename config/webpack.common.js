@@ -15,6 +15,8 @@ const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin
 const HtmlElementsPlugin = require('./html-elements-plugin');
 const autoprefixer = require('autoprefixer');
 const ProvidePlugin = require('webpack/lib/ProvidePlugin');
+const StatsWriterPlugin = require('webpack-stats-plugin').StatsWriterPlugin;
+
 
 /*
  * Webpack Constants
@@ -296,8 +298,11 @@ module.exports = {
       jquery: 'jquery',
       "Tether": 'tether',
       "window.Tether": "tether"
-    })
+    }),
 
+    new StatsWriterPlugin({
+      filename: "../build.log"
+    })
   ],
 
   /*
