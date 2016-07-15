@@ -2,6 +2,7 @@ import { WebpackAsyncRoute } from '@angularclass/webpack-toolkit';
 import { RouterConfig } from '@angular/router';
 import { Home } from './modules/home';
 import { Services } from './modules/services'
+import { Contact } from './modules/contact';
 import { NoContent } from './modules/no-content';
 
 import { DataResolver } from './app.resolver';
@@ -19,6 +20,9 @@ export const routes: RouterConfig = <RouterConfig>[
   },
   {
     path: 'services', component: Services,
+  },
+  {
+    path: 'contact', component: Contact,
   },
   // async components with children routes must use WebpackAsyncRoute
   {

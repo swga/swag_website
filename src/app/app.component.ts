@@ -39,9 +39,9 @@ import { AppState } from './app.service';
             </a>
           </li>
           -->
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-        Associatesact
+          <li [routerLinkActive]="['active']" class="nav-item">
+            <a class="nav-link" [routerLink]="['./contact']" href="#">
+              Contact
             </a>
           </li>
         </ul>
