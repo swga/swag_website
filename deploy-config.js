@@ -4,7 +4,7 @@ var s3Credential = {
   accessKeyId:     secrets.s3.accessKeyId,
   secretAccessKey: secrets.s3.secretAccessKey,
   params: {
-    Bucket:        'swga.co'
+    Bucket:        'swga-website'
   }
 };
 
@@ -84,7 +84,7 @@ var config = {
     },
     production: {
       credentials: s3Credential,
-      dirname: '/development/assets',
+      dirname: '/src/assets',
       assetsPath: 'dist/assets/*',
     }
   },

@@ -19,7 +19,7 @@ import { AppState } from './app.service';
     <nav class="navbar navbar-light">
       <div class="container">
         <a style="max-width: 400px;" class="nav-link" [routerLink]="['./home']">
-          <img class="img-fluid" [src]="angularclassLogo">
+          <img class="img-fluid width-100" [src]="angularclassLogo">
         </a>
         <ul class="nav navbar-nav">
           <li [routerLinkActive]="['active']" class="nav-item">
@@ -54,7 +54,7 @@ import { AppState } from './app.service';
       <div class="container">
         <div class="row">
           <div class="col-sm-6">
-            <p>&copy;2016 STUDLEY WALTON GRAY ASSOCIATES LLP</p>
+            <p>&copy;2016 SWG ASSOCIATES LLP</p>
           </div>
         </div>
       </div>
