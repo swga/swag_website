@@ -54,7 +54,7 @@ import { AppState } from './app.service';
       <div class="container">
         <div class="row">
           <div class="col-sm-6">
-            <p>&copy;2016 SWG ASSOCIATES LLP</p>
+            <p>&copy;2016 STUDLEY WALTON GRAY ASSOCIATES LLP</p>
           </div>
         </div>
       </div>
