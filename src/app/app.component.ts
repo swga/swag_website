@@ -56,6 +56,9 @@ import { AppState } from './app.service';
           <div class="col-sm-6">
             <p>&copy;2016 STUDLEY WALTON GRAY ASSOCIATES LLP</p>
           </div>
+          <div class="col-sm-6 ">
+            <p class="text-sm-right">Company Number: OC403795 | VAT Number: 249 0154 14</p>
+          </div>
         </div>
       </div>
     </footer>
