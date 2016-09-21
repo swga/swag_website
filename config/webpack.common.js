@@ -250,10 +250,6 @@ module.exports = {
       {
         from: 'src/assets',
         to: 'assets'
-      },
-      {
-        from: 'appspec.yml',
-        to: 'appspec.yml'
       }
     ]),
 

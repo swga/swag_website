@@ -1,0 +1,12 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/html
+hooks:
+  BeforeInstall:
+    - location: scripts/BeforeInstall.sh
+    - timeout: 10
+  AfterInstall:
+    - locaiton: scripts/AfterInstall.sh
+    - timeout: 10
