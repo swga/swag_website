@@ -1,8 +1,0 @@
-version: 0.0
-os: linux
-files:
-  - source: /dist/*
-    destination: /usr/share/nginx/html
-hooks:
-  BeforeInstall:
-  ApplicationStop:

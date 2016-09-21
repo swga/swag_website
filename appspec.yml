@@ -1,0 +1,16 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/html
+permissions:
+  - object: /var/www/html
+    pattern: appspec.yml
+    owner: root
+    group: root
+    mode: 640
+    type:
+     - file
+hooks:
+  BeforeInstall:
+  ApplicationStop:
